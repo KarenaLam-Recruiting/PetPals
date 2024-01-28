@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'navigation.dart';
 import 'appbar.dart';
 
 class HomePage extends StatefulWidget {
@@ -7,29 +6,59 @@ class HomePage extends StatefulWidget {
   HomePageState createState() => HomePageState();
 }
 
-class HomePageState extends State<HomePage>{
+class HomePageState extends State<HomePage> {
   PageController _pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.pink[200],
-          centerTitle: true,
-          title: Text(
-            'PetPals',
-            style: TextStyle(
-              fontSize: 25,
-              ),
-            ),
-          leading: Icon(Icons.filter_alt),
-        ),
+        appBar: CustomizedAppBar(),
         body: PageView(
           controller: _pageController,
           children: [
-            buildPage(Icons.home, 'Home Page', 'Swipe Right'),
-            buildPage(Icons.person, 'Profile Page', 'Swipe Right'),
-            buildPage(Icons.settings, 'Settings Page', 'Swipe Left'),
+            buildFirstPage(),
+            Image.asset(
+                'lib/images/tired.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            Image.asset(
+                'lib/images/IMG_3452.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            Image.asset(
+                'lib/images/IMG_3462.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            Image.asset(
+                'lib/images/IMG_3470.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            Image.asset(
+                'lib/images/IMG_3506.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            Image.asset(
+                'lib/images/orange cat.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            Image.asset(
+                'lib/images/IMG_3805.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
           ]
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -49,15 +78,22 @@ class HomePageState extends State<HomePage>{
             ),
           ],
           onTap: (index) {
-            _pageController.animateToPage(
-              index,
-              duration: Duration(milliseconds: 500),
-              curve: Curves.easeInOut,
-            );
+            _navigateToPage(index);
           },
         ),
       ),
     );
+  }
+  void _navigateToPage(int index) {
+    _pageController.animateToPage(
+      index,
+      duration: Duration(milliseconds: 500),
+      curve: Curves.easeInOut,
+    );
+    if (index == 0) {
+      // If the home page button is pressed, navigate to the first page
+      _pageController.jumpToPage(0);
+    }
   }
   Widget buildFirstPage() {
     return Center(
@@ -67,13 +103,14 @@ class HomePageState extends State<HomePage>{
           Container(
             height: 100,
           ),
-          Icon(
-            Icons.person,
-            size: 50,
-            color: Colors.black,
+          Image.asset(
+            'lib/images/Pet Pals.jpg',  // Adjust the path based on your project structure
+            width: 180,
+            height: 180,
+            fit: BoxFit.cover,
           ),
           Container(
-            height: 100,
+            height: 50,
           ),
           Text(
             'Where tails wag and hearts...',
