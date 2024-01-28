@@ -19,21 +19,6 @@ class HomePageState extends State<HomePage> {
           controller: _pageController,
           children: [
             buildFirstPage(),
-            GestureDetector(
-              onTap: () {
-                // When the image is tapped, navigate to the Profile1 page
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Profile2()),
-                );
-              },
-              child: Image.asset(
-                'lib/images/tired.jpg',
-                width: 180,
-                height: 180,
-                fit: BoxFit.cover,
-              ),
-            ),
             // Image.asset(
             //     'lib/images/tired.jpg',  // Adjust the path based on your project structure
             //     width: 180,
@@ -76,6 +61,21 @@ class HomePageState extends State<HomePage> {
                 height: 180,
                 fit: BoxFit.cover,
               ),
+              GestureDetector(
+              onTap: () {
+                // When the image is tapped, navigate to the Profile1 page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profile2()),
+                );
+              },
+              child: Image.asset(
+                'lib/images/tired.jpg',
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+            ),
           ]
         ),
         bottomNavigationBar: BottomNavigationBar(
