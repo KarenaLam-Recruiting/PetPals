@@ -11,31 +11,63 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.pink[200],
           centerTitle: true,
           title: Text(
-            'Welcome to PetPals',
+            'PetPals',
             style: TextStyle(
               fontSize: 25,
               ),
             ),
         ),
-        backgroundColor: Colors.blue[200],
+        //backgroundColor: Colors.blue[200],
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Container(
+                height: 100,
+              ),
               Icon(
                 Icons.person,
                 size: 50,
                 color: Colors.black,
               ),
+              Container(
+                height: 100,
+              ),
               Text(            
-                'Swipe right to begin',
+                'Where tails wag and hearts...',
                 style: TextStyle(
                 fontSize: 15,
                 ),
               ),
+              Container(
+                height: 25,
+              ),
+              Text(
+                'Swipe Right',
+                style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blue[200],
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
+          ],
         ),
       ),
       );
