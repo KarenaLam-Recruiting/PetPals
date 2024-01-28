@@ -61,6 +61,9 @@ class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget{
           ];
         },
       ),
+      actions: [
+        Icon(Icons.message),
+      ],
     );
   }
   void _showCustomInputDialog(BuildContext context) {
