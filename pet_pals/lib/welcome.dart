@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'navigation.dart';
+import 'appbar.dart';
 
 class HomePage extends StatelessWidget {
   PageController _pageController = PageController(initialPage: 0);
