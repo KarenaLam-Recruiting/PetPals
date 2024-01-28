@@ -9,12 +9,13 @@ class Profile1 extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [          
             CustomizedAppBar(),
             Image.asset(
                 'lib/images/IMG_3846.jpg',  // Adjust the path based on your project structure
-                width: 350,
-                height: 330,
+                width: 412,
+                height: 240,
                 fit: BoxFit.cover,
               ),
             Padding(
