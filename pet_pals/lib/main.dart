@@ -4,5 +4,5 @@ import 'profile1.dart';
 import 'welcome.dart';
 
 void main() {
-  runApp(HomePage());
+  runApp(Profile1());
 }

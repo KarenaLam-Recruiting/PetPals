@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'navigation.dart';
 import 'appbar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  HomePageState createState() => HomePageState();
+}
+
+class HomePageState extends State<HomePage>{
   PageController _pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
@@ -17,6 +22,7 @@ class HomePage extends StatelessWidget {
               fontSize: 25,
               ),
             ),
+          leading: Icon(Icons.filter_alt),
         ),
         body: PageView(
           controller: _pageController,
