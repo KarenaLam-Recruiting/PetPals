@@ -13,7 +13,7 @@ class Profile1 extends StatelessWidget{
           children: [          
             CustomizedAppBar(),
             Image.asset(
-                'lib/images/IMG_3846.jpg',  // Adjust the path based on your project structure
+                'lib/images/tired.jpg',  // Adjust the path based on your project structure
                 width: 412,
                 height: 240,
                 fit: BoxFit.cover,
@@ -22,7 +22,7 @@ class Profile1 extends StatelessWidget{
               padding: EdgeInsets.fromLTRB(15,5,5,0),
               child: 
                 Text(
-                'Name: Is Mayonnaise An Instrument (Mayo)',
+                'Name: Stella',
                 textAlign: TextAlign.left
                 ),
             ),
@@ -30,7 +30,7 @@ class Profile1 extends StatelessWidget{
               padding: EdgeInsets.fromLTRB(15,5,5,0),
               child: 
                 Text(
-                'Age: < 1 Month',
+                'Age: 6 Years',
                 textAlign: TextAlign.left
                 ),
             ),
@@ -38,7 +38,7 @@ class Profile1 extends StatelessWidget{
               padding: EdgeInsets.fromLTRB(15,5,5,0),
               child: 
               Text(
-                'Species: Fish',
+                'Species: Cat',
                 textAlign: TextAlign.left
                 ),
             ),
@@ -46,7 +46,7 @@ class Profile1 extends StatelessWidget{
               padding: EdgeInsets.fromLTRB(15,5,20,0),
               child:
               Text(
-                'Breed: Betta Fish',
+                'Breed: Tabby',
                 textAlign: TextAlign.left
               ),
             ),
@@ -58,7 +58,7 @@ class Profile1 extends StatelessWidget{
               padding: EdgeInsets.fromLTRB(15,20,10,0),
               child: 
                 Text(
-                'Biography: I like swimming in my tank without any competition for anything in my life: food, my owners attention, and hopefully a female. However, my mom says I am "too aggressive" but I have to disagree. I am a sweet boy that likes taking laps around the tank and eating all my food',
+                'Biography: I am a princess that rules over the house with no authority over my own. I like to chase others away from my food and knocking over Dr. Pepper cans onto my parents beds. Even though I have been described as spicy, I make biscuits and cuddle on snowy winter nights.',
                 textAlign: TextAlign.left
                 ),
             ),
