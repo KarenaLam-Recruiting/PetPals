@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Navigation extends StatelessWidget{
   Navigation();
+  PageController _pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context){
@@ -21,7 +22,13 @@ class Navigation extends StatelessWidget{
           label: 'Settings',
         ),
       ],
-      
+      onTap: (index) {
+        _pageController.animateToPage(
+          index,
+          duration: Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+      },
     );
   }
 }
