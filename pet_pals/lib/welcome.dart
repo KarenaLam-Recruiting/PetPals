@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'appbar.dart';
 import 'profile1.dart';
+import 'profile2.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,12 +19,27 @@ class HomePageState extends State<HomePage> {
           controller: _pageController,
           children: [
             buildFirstPage(),
-            Image.asset(
-                'lib/images/tired.jpg',  // Adjust the path based on your project structure
+            GestureDetector(
+              onTap: () {
+                // When the image is tapped, navigate to the Profile1 page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profile2()),
+                );
+              },
+              child: Image.asset(
+                'lib/images/tired.jpg',
                 width: 180,
                 height: 180,
                 fit: BoxFit.cover,
               ),
+            ),
+            // Image.asset(
+            //     'lib/images/tired.jpg',  // Adjust the path based on your project structure
+            //     width: 180,
+            //     height: 180,
+            //     fit: BoxFit.cover,
+            //   ),
             Image.asset(
                 'lib/images/IMG_3452.jpg',  // Adjust the path based on your project structure
                 width: 180,

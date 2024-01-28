@@ -3,7 +3,7 @@ import 'navigation.dart';
 import 'appbar.dart';
 import 'multiselect.dart';
 
-class Profile1 extends StatelessWidget{
+class Profile2 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
