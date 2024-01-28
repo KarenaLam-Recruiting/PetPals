@@ -15,7 +15,7 @@ class Profile2 extends StatelessWidget{
             Image.asset(
                 'lib/images/tired.jpg',  // Adjust the path based on your project structure
                 width: 412,
-                height: 240,
+                height: 260,
                 fit: BoxFit.cover,
               ),
             Padding(
