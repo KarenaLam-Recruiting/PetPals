@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'welcome.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -48,6 +49,10 @@ class MyHomePage extends StatelessWidget {
               SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
                   print('Sign In button pressed!');
                 },
                 style: ElevatedButton.styleFrom(
@@ -67,13 +72,6 @@ class MyHomePage extends StatelessWidget {
                 ),
                 child: Text('Create Account'),
               ),
-              // SizedBox(height: 16),
-              // Image.asset(
-              //   'lib/images/Pet Pals.jpg',  // Adjust the path based on your project structure
-              //   width: 200,
-              //   height: 200,
-              //   fit: BoxFit.cover,
-              // ),
             ],
           ),
         ),
