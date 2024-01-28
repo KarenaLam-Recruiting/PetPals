@@ -13,8 +13,8 @@ class Profile1 extends StatelessWidget{
             CustomizedAppBar(),
             Image.asset(
                 'lib/images/IMG_3846.jpg',  // Adjust the path based on your project structure
-                width: 400,
-                height: 341,
+                width: 350,
+                height: 330,
                 fit: BoxFit.cover,
               ),
             Padding(
