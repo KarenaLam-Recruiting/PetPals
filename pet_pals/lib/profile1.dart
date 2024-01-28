@@ -9,16 +9,21 @@ class Profile1 extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: [          
             CustomizedAppBar(),
+            Image.asset(
+                'lib/images/IMG_3846.jpg',  // Adjust the path based on your project structure
+                width: 400,
+                height: 341,
+                fit: BoxFit.cover,
+              ),
             Padding(
-              padding: EdgeInsets.fromLTRB(15,10,5,0),
-              child:            
-              Text(
+              padding: EdgeInsets.fromLTRB(15,5,5,0),
+              child: 
+                Text(
                 'Name: Is Mayonnaise An Instrument (Mayo)',
                 textAlign: TextAlign.left
-              ),
+                ),
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(15,5,5,0),

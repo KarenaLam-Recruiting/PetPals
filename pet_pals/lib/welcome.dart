@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'appbar.dart';
+import 'profile1.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -93,6 +94,13 @@ class HomePageState extends State<HomePage> {
     if (index == 0) {
       // If the home page button is pressed, navigate to the first page
       _pageController.jumpToPage(0);
+    }
+    if (index == 1) {
+    // If the "Profile" button is pressed, navigate to the Profile1 page
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Profile1()),
+      );
     }
   }
   Widget buildFirstPage() {
