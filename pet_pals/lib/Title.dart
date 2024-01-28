@@ -38,6 +38,14 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 10),
+              Image.asset(
+                'lib/images/Pet Pals.jpg',  // Adjust the path based on your project structure
+                width: 180,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
+              SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
                   print('Sign In button pressed!');
@@ -59,6 +67,13 @@ class MyHomePage extends StatelessWidget {
                 ),
                 child: Text('Create Account'),
               ),
+              // SizedBox(height: 16),
+              // Image.asset(
+              //   'lib/images/Pet Pals.jpg',  // Adjust the path based on your project structure
+              //   width: 200,
+              //   height: 200,
+              //   fit: BoxFit.cover,
+              // ),
             ],
           ),
         ),
