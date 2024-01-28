@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'navigation.dart';
+import 'appbar.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -7,23 +8,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.pink[200],
-          centerTitle: true,
-          title: Text(
-            'PetPals',
-            style: TextStyle(
-              fontSize: 25,
-              ),
-            ),
-        ),
-        //backgroundColor: Colors.blue[200],
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              CustomizedAppBar(),
               Container(
-                height: 100,
+                height: 125,
               ),
               Icon(
                 Icons.person,
@@ -49,27 +41,14 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 ),
               ),
+              Container(
+                height: 225,
+              ),
+              Navigation(),
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blue[200],
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
-            ),
-          ],
-        ),
       ),
-      );
+    );
   }
 }
